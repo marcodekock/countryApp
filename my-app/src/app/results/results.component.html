@@ -1,0 +1,15 @@
+<img class="homeBtn" src="assets/Capfin.jpg" (click)="routeHome()" aria-hidden="true" />
+<h1>RESULTS</h1>
+<modal *ngIf="visible" (closeEvent)="visible = false"></modal>
+<div *ngIf="data.length > 0">
+<div class="country" *ngFor="let x of data">
+    <section class="listing">
+        <img 
+            class="listing-photo" 
+            src={{x.flags.png}}
+            (click)="toggleModal(x)"
+        />
+        <h2 class="listing-heading">{{ x.name.common }}</h2>
+    </section>
+</div>
+</div>

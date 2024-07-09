@@ -1,0 +1,11 @@
+<router-outlet />
+<section>
+    <img class="brand-logo" class="logo" src="assets/Capfin.jpg" aria-hidden="true" />
+      <form onsubmit="return false">
+        <input type="text" #keyword placeholder="Filter by Country" (keyup.enter)="getList(keyword.value)"/>
+        <button class="primary" type="button" (click)="getList(keyword.value)">Search</button>    
+      </form>
+      <div class="lucky">
+        <button class="secondary" type="button" (click)="getRandom()">Random Country</button>
+      </div> 
+</section>
